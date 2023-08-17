@@ -122,49 +122,8 @@
                 </div>
             </form>
         </div>
-    </div><!-- End Property Search Section -->
-    <!-- ======= Header/Navbar ======= -->
-    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-        <div class="container">
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <a class="navbar-brand text-brand" href="">Ali-<span class="color-b">Imobiliária</span></a>
 
-            <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-                <ul class="navbar-nav">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="">Página Inicial</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="">Sobre Nós</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="">Propriedade</a>
-                    </li>
-
-
-                    @guest
-                    <li class="nav-item">
-                        <a class="nav-link " href="{{ route('login') }}">Login</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="{{route('register')}}">Cadastrar</a>
-                    </li>
-                    @endguest
-
-
-
-            </div>
-
+            @include('pages.layouts.navbar')
             <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse"
                 data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
 
@@ -176,48 +135,7 @@
 
     @yield('content')
 
-    <!-- ======= Footer ======= -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="socials-a">
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="bi bi-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="bi bi-twitter" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="bi bi-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="bi bi-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="copyright-footer">
-                        <p class="copyright color-text-a">
-                            &copy; Copyright
-                            <span class="color-a">Ali-Imobiliária</span> Area Reservada para a empresa.
-                        </p>
-                    </div>
-                    <div class="credits"> Desenvolvido por: <a href="#">EndGames</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer><!-- End  Footer -->
+    @include('pages.layouts.footer')
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

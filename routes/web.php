@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +31,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('loginteste',  [ProfileController::class, 'teste']);
+
+
 
 require __DIR__.'/auth.php';

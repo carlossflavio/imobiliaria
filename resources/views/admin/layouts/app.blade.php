@@ -2,25 +2,7 @@
 <html lang="pt-pt">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title')</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ 'assetes/vendors/simple-line-icons/css/simple-line-icons.css' }}">
-    <link rel="stylesheet" href="{{ 'assetes/vendors/flag-icon-css/css/flag-icon.min.css' }}">
-    <link rel="stylesheet" href="{{ 'assetes/vendors/css/vendor.bundle.base.css' }}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="{{ 'assetes/vendors/daterangepicker/daterangepicker.css' }}">
-    <link rel="stylesheet" href="{{ 'assetes/vendors/chartist/chartist.min.css' }}">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ 'assetes/css/style.css' }}">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{ 'assetes/images/logo.jpg' }}" />
+    @include('admin.layouts.css')
 </head>
 
 <body>
@@ -35,7 +17,7 @@
                         alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
-                <h5 class="mb-0 font-weight-medium d-none d-lg-flex"> Seja novamento bem-vindo: {{ Auth::user()->name }}
+                <h5 class="mb-0 font-weight-medium d-none d-lg-flex"> Seja novamento bem-vindo: {{ Auth::user()->name}}
                 </h5>
                 <ul class="navbar-nav navbar-nav-right ml-auto">
                     <form class="search-form d-none d-md-block" action="#">
@@ -130,7 +112,7 @@
                                 Acitividades</a>
                             <a class="dropdown-item"><i class="dropdown-item-icon icon-question text-primary"></i>
                                 FAQ</a>
-                            <a class="dropdown-item"><i
+                            <a class="dropdown-item" ><i
                                     class="dropdown-item-icon icon-power text-primary"></i>Sair</a>
                         </div>
                     </li>
@@ -146,15 +128,15 @@
 
                    @include('admin.layouts.sidebar')
 
-        
+
         <div class="main-panel">
             <div class="content-wrapper">
 
-                
+
                     @yield('content')
 
 
-             </div>    
+             </div>
                 <!-- content-wrapper ends -->
 
                 @include('admin.layouts.footer')
@@ -165,23 +147,7 @@
         </div>
         <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{{ 'assetes/vendors/js/vendor.bundle.base.js' }}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="{{ 'assetes/vendors/chart.js/Chart.min.js' }}"></script>
-    <script src="{{ 'assetes/vendors/moment/moment.min.js' }}"></script>
-    <script src="{{ 'assetes/vendors/daterangepicker/daterangepicker.js' }}"></script>
-    <script src="{{ 'assetes/vendors/chartist/chartist.min.js' }}"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{ 'assetes/js/off-canvas.js' }}"></script>
-    <script src="{{ 'assetes/js/misc.js' }}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <script src="{{ 'assetes/js/dashboard.js' }}"></script>
-    <!-- End custom js for this page -->
-</body>
+
+        @include('admin.layouts.js')
 
 </html>
