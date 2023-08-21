@@ -17,16 +17,15 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="">Página Inicial</a>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link " href="">Sobre Nós</a>
-                </li>
-
                 <li class="nav-item">
                     <a class="nav-link " href="">Imóveis</a>
                 </li>
-
-
+                <li class="nav-item">
+                    <a class="nav-link " href="">Blog Imobiliário</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="">Quem Somos</a>
+                </li>
                 @guest
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('login') }}">Login</a>

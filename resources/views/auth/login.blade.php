@@ -1,5 +1,5 @@
 @extends('pages.layouts.layout')
-@section('title','Página Home')
+@section('title','Login')
 @section ('content')
 
 @guest
@@ -28,7 +28,8 @@
                                     <input type="email"
                                     name="email"
                                     class="form-control form-control-lg" id="exampleInputEmail1" :value="old('email')"
-                                    required autofocus autocomplete="username">
+                                    required autofocus autocomplete="username"
+                                    placeholder="E-mail">
                                 </div>
                                 <div class="form-group">
                                     <input type="password"
@@ -37,22 +38,22 @@
                                     id="exampleInputPassword1"
                                     :value="('Password')"
                                     required autocomplete="current-password"
-                                    placeholder="Password">
+                                    placeholder="Palavra-passe">
                                 </div>
                                 <div class="mt-3">
-                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit"
+                                    <button class="btn btn-block btn-warning btn-lg font-weight-medium auth-form-btn" type="submit"
                                         name="login">Entrar</button>
                                 </div>
                                 <div class="my-2 d-flex justify-content-between align-items-center">
                                     <div class="form-check">
                                         <label class="form-check-label text-muted">
-                                            <input type="checkbox" name="remember" class="form-check-input"> Keep me signed in
+                                            <input type="checkbox" name="remember" class="form-check-input"> Lembrar-me
                                         </label>
                                     </div>
-                                    <a href="{{route ('password.request')}}" class="auth-link text-black">Esqueceu a password?</a>
+                                    <a href="{{route ('password.request')}}" class="auth-link text-black">Esqueceu a palavra-passe?</a>
                                 </div>
-                                <div class="text-center mt-4 font-weight-light"> Não possui uma conta? <a
-                                        href="{{ route('register') }}" class="text-primary">Criar</a>
+                                <div style="color: black" class="text-center mt-4 font-weight-light"> Não possui uma conta? <a
+                                        href="{{ route('register') }}" class="text-primary">Cadastrar-se</a>
                                 </div>
                             </form>
                         </div>
