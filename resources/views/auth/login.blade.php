@@ -2,15 +2,11 @@
 @section('title','Login')
 @section ('content')
 
-@guest
-
 
 @include('admin.layouts.css')
 
-
+@guest
 <div class="intro intro-carousel swiper position-relative">
-
-
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
             <div class="content-wrapper d-flex align-items-center auth">
@@ -65,10 +61,10 @@
     </div>
     <!-- content-wrapper ends -->
 </div>
-
+@endguest
 
 @include('admin.layouts.js')
 
-@endguest
+
 @endsection
 

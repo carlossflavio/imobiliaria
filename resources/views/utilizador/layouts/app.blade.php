@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
+
 <head>
- <!-- Required meta tags -->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
- <title>@yield('title')</title>
-
-    @include('admin.layouts.css')
+    @include('utilizador.layouts.css')
     
 </head>
 
 <body>
-    @include('admin.layouts.navbar')
+    @include('utilizador.layouts.navbar')
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
 
-        @include('admin.layouts.sidebar')
+        @include('utilizador.layouts.sidebar')
 
 
         <div class="main-panel">
@@ -38,7 +33,7 @@
             </div>
             <!-- fim de conteúdo da pagina -->
 
-            @include('admin.layouts.footer')
+            @include('utilizador.layouts.footer')
 
 
         </div>
@@ -47,7 +42,7 @@
     <!-- page-body-wrapper ends -->
     </div>
 
-    @include('admin.layouts.js')
+    @include('utilizador.layouts.js')
 </body>
 
 </html>

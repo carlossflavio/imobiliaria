@@ -4,9 +4,7 @@
 
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel swiper position-relative">
-
     <div class="swiper-wrapper">
-
       <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(assets/img/imovel-1 (1).jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">

@@ -22,53 +22,16 @@
             <span class="nav-link">Painel Administrativo</span>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.index')}}">
+            <a class="nav-link" href="index.html">
                 <span class="menu-title">Dashboard</span>
                 <i class="icon-screen-desktop menu-icon"></i>
             </a>
         </li>
-        <li class="nav-item nav-category"><span class="nav-link">Cadastros</span>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Funcionários</span>
-                <i class="icon-user-follow menu-icon"></i>
-            </a>
-        </li>
-        <div class="collapse" id="ui-basic">
-            <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Adicionar funcionário</a>
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="">Cargos</a>
-                </li>
-            </ul>
-        </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Imóveis</span>
-                <i class="icon-home menu-icon"></i>
-            </a>
-        </li>
-        <div class="collapse" id="ui-basic">
-            <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Todos Imóveis</a>
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="">Adicionar tipo Imóvel</a>
-                </li>
-            </ul>
-        </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="">
                 <span class="menu-title">Estado do Imóvel</span>
                 <i class="icon-note menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="pages/icons/simple-line-icons.html">
-                <span class="menu-title">Proprietários</span>
-                <i class="icon-people menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
