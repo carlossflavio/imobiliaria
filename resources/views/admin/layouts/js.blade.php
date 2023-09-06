@@ -3,7 +3,6 @@
     <script src="{{ asset('assetes/vendors/js/vendor.bundle.base.js') }}"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="{{ asset('assetes/vendors/chart.js/Chart.min.js') }}"></script>
     <script src="{{ asset('assetes/vendors/moment/moment.min.js') }}"></script>
     <script src="{{ asset('assetes/vendors/daterangepicker/daterangepicker.js') }}"></script>
     <script src="{{ asset('assetes/vendors/chartist/chartist.min.js') }}"></script>
@@ -20,6 +19,8 @@
     <!-- Script Js para Mensagem de actualização dos Dados -->
     <!-- Inclua jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 
 
 
@@ -48,3 +49,24 @@
             }
         @endif
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="{{ asset('assets1/js/code/code.js') }}"></script>
+    <!-- Plugin js for this page -->
+    <script src=" {{ asset('assets1/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+    <script src=" {{ asset('assets1/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
+    <!-- End plugin js for this page -->
+
+    <!-- core:js -->
+    <script src="{{ asset('assets1/assets/vendors/core/core.js') }}"></script>
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="{{ asset('assets1/assets/js/template.js}') }}"></script>
+    <!-- endinject -->
+
+    <!-- Inicio Dados da Tabela -->
+    <script src="{{ asset('assets1/assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('assets1/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
+    <script src=" {{ asset('assets1/js/data-table.js') }}"></script>
+    <!--Fim dados da tabela -->

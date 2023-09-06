@@ -8,7 +8,7 @@
  <title>@yield('title')</title>
 
     @include('admin.layouts.css')
-    
+
 </head>
 
 <body>

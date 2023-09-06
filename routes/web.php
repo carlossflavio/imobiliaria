@@ -3,6 +3,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\EmpresaController;
+use App\Http\Controllers\Backend\TipoImovelController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UtilizadorController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +37,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
+// Grupo Middleware Controlo Administrativo
 Route::middleware(['auth','role:admin'])->group(function () {
 
     Route::get('/admin', [AdminController::class, 'AdminDashboard'])->name('admin.index');
@@ -56,3 +59,46 @@ Route::middleware(['auth','role:user'])->group(function () {
     Route::get('/utilizador/logout', [UtilizadorController::class, 'UtilizadorLogout'])->name('utilizador.logout');
 
 }); // fim do grupo de middleware utilizadores/funcionários
+
+
+// // Grupo Middleware Controlo de Imoveis
+// Route::middleware(['auth','role:admin'])->group(function () {
+
+//     // Rotas de Imóveis
+//     Route::controller(ImovelController::class)-> group(function(){
+
+//         Route::get('/all/imoveis', 'TodosImoveis' )->name('todos.imoveis');
+
+
+
+//     });
+// }); // fim do grupo de middleware admin
+
+// Grupo Middleware Controlo de Imoveis
+Route::middleware(['auth','role:admin'])->group(function () {
+
+    // Rotas de Tipos de Imóveis
+    Route::controller(TipoImovelController::class)-> group(function(){
+
+        Route::get('/all/type', 'TodosTipos' )->name('todos.tipos');
+        Route::get('/add/type', 'AdicionarTipo' )->name('add.tipos');
+        Route::post('/store/type', 'StoreTipo')->name('store.tipos');
+        Route::get('/edit/type/{id}', 'EditarTipo' )->name('editar.tipo');
+        Route::post('/update/type', 'UpdateTipo')->name('update.tipos');
+        Route::get('/delete/type/{id}', 'EliminarTipo' )->name('eliminar.tipo');
+
+    });
+
+    Route::controller(EmpresaController::class)-> group(function(){
+
+        Route::get('/all/empresa', 'AllEmpresa' )->name('todos.empresa');
+        Route::get('/add/empresa', 'AdicionarEmpresa' )->name('add.empresa');
+        Route::post('/store/empresa', 'StoreEmpresa')->name('store.empresa');
+        Route::get('/edit/empresa/{id}', 'EditarEmpresa' )->name('editar.empresa');
+        Route::post('/update/empresa', 'UpdateEmpresa')->name('update.empresa');
+        Route::get('/delete/wmpresa/{id}', 'EliminarEmpresa' )->name('eliminar.empresa');
+
+    });
+
+
+}); // fim do grupo de middleware admin
