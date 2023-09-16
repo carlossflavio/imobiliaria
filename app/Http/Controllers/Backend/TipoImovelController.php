@@ -84,28 +84,26 @@ class TipoImovelController extends Controller
 // //     }
 // // }
 
+public function AdicionarTipo()
+{
+ 
+    return view('imoveis.tipos.add-tipos');
+}
+
     public function TodosTipos()
     {
         $tipos = TipoImovel::latest()->get();
         return view('imoveis.tipos.todos-tipos', compact('tipos'));
     }
-
-    public function AdicionarTipo()
-    {
-        $tipologias = Tipologia::all();
-        return view('imoveis.tipos.add-tipos', compact('tipologias'));
-    }
-
+    
     public function StoreTipo(Request $request)
     {
         $request->validate([
             'nome_tipo' => 'required|unique:tipo_imovels|max:200',
-            'id_tipologia' => 'required|exists:tipologias,id',
         ]);
 
         TipoImovel::create([
             'nome_tipo' => $request->nome_tipo,
-            'id_tipologia' => $request->id_tipologia,
         ]);
 
         $notification = [
@@ -119,8 +117,7 @@ class TipoImovelController extends Controller
     public function EditarTipo($id)
     {
         $tipo = TipoImovel::findOrFail($id);
-        $tipologias = Tipologia::all();
-        return view('imoveis.tipos.edit-tipos', compact('tipo', 'tipologias'));
+        return view('imoveis.tipos.edit-tipos', compact('tipo'));
     }
 
     public function UpdateTipo(Request $request)
@@ -129,12 +126,10 @@ class TipoImovelController extends Controller
 
         $request->validate([
             'nome_tipo' => 'required|max:200',
-            'id_tipologia' => 'required|exists:tipologia,id',
         ]);
 
         TipoImovel::findOrFail($pid)->update([
             'nome_tipo' => $request->nome_tipo,
-            'id_tipologia' => $request->id_tipologia,
         ]);
 
         $notification = [

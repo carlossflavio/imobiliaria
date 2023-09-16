@@ -34,14 +34,6 @@ class="form-control
         <label for="nome_tipo">Nome do Tipo de Imóvel</label>
         <input type="text" class="form-control" id="nome_tipo" name="nome_tipo" value="{{ $tipo->nome_tipo }}">
     </div>
-    <div class="form-group">
-        <label for="id_tipologia">Tipologia</label>
-        <select class="form-control" id="id_tipologia" name="id_tipologia">
-            @foreach ($tipologias as $tipologia)
-                <option value="{{ $tipologia->id }}">{{ $tipologia->nome_tipologia }}</option>
-            @endforeach
-        </select>
-    </div>
 
 
 

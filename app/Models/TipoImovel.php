@@ -12,9 +12,9 @@ class TipoImovel extends Model
 
     protected $guarded = [];
 
-    public function tipologia()
+    public function Imoveis()
     {
-        return $this->belongsTo(Tipologia::class, 'id_tipologia');
+        return $this->hasMany(Imovel::class, 'id_imovel');
     }
 
 }

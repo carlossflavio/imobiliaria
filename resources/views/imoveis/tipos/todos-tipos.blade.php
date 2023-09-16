@@ -51,7 +51,6 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Nome do Tipo de Imóvel</th>
-                                        <th>Tipologia</th>
                                         <th>Acção</th>
                                     </tr>
                                 </thead>
@@ -61,7 +60,7 @@
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $item->nome_tipo }}</td>
-                                        <td>{{ $item->tipologia->nome_tipologia }}</td>
+
                                             <td>
                                                 <a class="btn btn-inverse-dark" href="{{ route('editar.tipo', $item->id) }}">Editar</a>
                                                 <a class="btn btn-inverse-danger" id="delete" href="{{ route('eliminar.tipo', $item->id) }}">Eliminar</a>

@@ -13,7 +13,7 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="">Página Inicial</a>
+                    <a class="nav-link active" href="{{route('pages.index')}}">Página Inicial</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="">Imóveis</a>
@@ -26,45 +26,52 @@
                 </li>
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link " href="{{ route('login') }}">Login</a>
+                        <a class="nav-link " href="{{ route('cliente.login') }}">Login</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="{{ route('register') }}">Cadastrar</a>
+                        <a class="nav-link " href="{{ route('cliente.add') }}">Cadastrar</a>
                     </li>
                 @endguest
 
                 @auth
+
+
+                @auth
+
+@php
+$id = Auth::user()->id;
+$profileData = App\Models\User::find($id);
+@endphp
                     <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
                         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown"
                             aria-expanded="false">
-                            <p class="mb-1 mt-3">{{ Auth::user()->name }}</p>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                            <div class="dropdown-header text-center">
-                                <img class="img-md rounded-circle"
-                                    src="{{ asset('assetes/images/faces/agente007.jpeg') }}" alt="Profile image">
-                                <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
-                            </div>
-                            <a class="dropdown-item" href="{{ route('profile.edit') }}"><i
-                                    class="dropdown-item-icon icon-user text-primary"></i>Meu
-                                Perfil <span class="badge badge-pill badge-danger">1</span></a>
-                            <a class="dropdown-item" href=""><i class="dropdown-item-icon icon-speech text-primary"></i>
-                                Mensagens</a>
-                            <a class="dropdown-item" href=""><i class="dropdown-item-icon icon-energy text-primary"></i>
-                                Meus Imóveis</a>
-                            <a class="dropdown-item"><i class="dropdown-item-icon icon-question text-primary"></i>
-                                FAQ</a>
+                            <i class="bi bi-person user-icon" >{{ Auth::user()->name}}</i>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                                aria-labelledby="UserDropdown">
+                                <div class="dropdown-header text-center">
 
-                            <form method="Post" action="{{ route('logout') }}">
-                                @csrf
-                                <a type="submit" class="dropdown-item" :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                    this.closest('form').submit();"><i
-                                 class="dropdown-item-icon icon-power text-primary">
-                                </i>Sair</a>
-                            </form>
-                        </div>
+<img class="img-md rounded-circle" src="{{ !empty($profileData->imagem) ? url('upload/admin-imagem/' . $profileData->imagem) : url('upload/no_image.jpg') }}" alt="Profile image">
+
+                                    <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
+                                </div>
+                                <a class="dropdown-item" href=""><i
+                                        class="dropdown-item-icon icon-user text-primary"></i>Meu
+                                    Perfil <span class="badge badge-pill badge-danger">1</span></a>
+                                <a class="dropdown-item" href=""><i class="dropdown-item-icon icon-speech text-primary"></i>
+                                    Mensagens</a>
+                                <a class="dropdown-item" href=""><i
+                                        class="dropdown-item-icon icon-energy text-primary"></i>
+                                    Meus Imóveis</a>
+                                <a type="submit" class="dropdown-item"
+                                    href="{{ route('cliente.logout') }}"><i
+                                        class="dropdown-item-icon icon-power text-primary">
+                                    </i>Sair</a>
+                            </div>
                     </li>
+                @endauth
+
+
 
                 @endauth
             </ul>
@@ -101,7 +108,6 @@
                             <option>Selecione</option>
                             <option>Arrendar</option>
                             <option>Comprar</option>
-                            <option>Open House</option>
                         </select>
                     </div>
                 </div>

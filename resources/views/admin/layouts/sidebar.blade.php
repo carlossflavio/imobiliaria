@@ -52,9 +52,13 @@
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('todos.tipos') }}"> Todos Imóveis </a>
+                    <li class="nav-item"> <a class="nav-link" href="">Todos imoveis </a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('add.tipos') }}"> Adicionar Imóvel</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="">Adicionar Imóvel</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('todos.tipos') }}">Tipos de imóvel </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('add.tipos') }}"> Adicionar tipo de Imóvel</a></li>
                 </ul>
             </div>
         </li>

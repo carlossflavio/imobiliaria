@@ -28,16 +28,6 @@
 @enderror
 </div>
 
-<div class="mb-3">
-    <label for="id_tipologia">Tipologia</label>
-    <select class="form-control" id="id_tipologia" name="id_tipologia">
-        <option value="" selected>Selecionar</option>
-        @foreach ($tipologias as $tipologia)
-            <option value="{{ $tipologia->id }}">{{ $tipologia->nome_tipologia }}</option>
-        @endforeach
-    </select>
-</div>
-
 
 
                     <button type="submit" class="btn btn-warning me-2">Guardar</button>

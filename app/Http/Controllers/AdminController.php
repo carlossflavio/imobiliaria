@@ -11,7 +11,11 @@ class AdminController extends Controller
 {
     //
     public function AdminDashboard() {
-        return view ('admin.index');
+        return view ('admin.admin-index');
+    }
+
+    public function AdminLogin() {
+        return view('admin.admin-login');
     }
 
     public function AdminLogout(Request $request)
@@ -22,7 +26,7 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/admin/login');
     }// Logout para Admin
 
     public function AdminProfile(){

@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('tipo_imovels', function (Blueprint $table) {
             $table->id();
             $table->string('nome_tipo');
-            $table->unsignedBigInteger('id_tipologia');
-            $table->foreign('id_tipologia')->references('id')->on('tipologias');
             $table->timestamps();
         });
     }
