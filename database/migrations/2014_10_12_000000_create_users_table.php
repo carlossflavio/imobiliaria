@@ -16,9 +16,16 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('sobrenome')-> nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('imagem')-> nullable();
+            $table->string('nif')-> nullable();
+            $table->string('telefone')-> nullable();
+            $table->string('morada')-> nullable();
+            $table->enum('role', ['secretaria','agente'])->default('agente');
+            $table->enum('status', ['activo','inactivo'])->default('activo');
             $table->rememberToken();
             $table->timestamps();
         });

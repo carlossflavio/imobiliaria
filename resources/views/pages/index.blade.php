@@ -4,8 +4,15 @@
 
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel swiper position-relative">
-
     <div class="swiper-wrapper">
+        
+@auth
+        @if (!Auth::guard('cliente')->user()->perfil_completo)
+            <div class="alert alert-warning">
+                  Termine por favor de preencher o seu cadastro.
+            </div>
+        @endif
+@endauth
 
       <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(assets/img/imovel-1 (1).jpg)">
         <div class="overlay overlay-a"></div>

@@ -40,6 +40,18 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'cliente' => [
+            'driver' => 'session',
+            'provider' => 'clientes',
+        ],
+        'proprietario' => [
+            'driver' => 'session',
+            'provider' => 'proprietarios',
+        ],
     ],
 
     /*
@@ -63,6 +75,18 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+        'clientes' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Cliente::class,
+        ],
+        'proprietarios' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Proprietario::class,
         ],
 
         // 'users' => [
