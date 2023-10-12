@@ -24,6 +24,7 @@
                 <li class="nav-item">
                     <a class="nav-link " href="">Quem Somos</a>
                 </li>
+<<<<<<< HEAD
                 @guest('cliente')
                     <li class="nav-item">
                         <a class="nav-link " href="{{ route('cliente.form') }}">Login</a>
@@ -42,20 +43,52 @@
 @php
 $id = Auth::guard('cliente')->user()->id;
 $profileData = App\Models\Cliente::find($id);
+=======
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{ route('cliente.login') }}">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{ route('cliente.add') }}">Cadastrar</a>
+                    </li>
+                @endguest
+
+                @auth
+
+
+                @auth
+
+@php
+$id = Auth::user()->id;
+$profileData = App\Models\User::find($id);
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 @endphp
                     <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
                         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown"
                             aria-expanded="false">
+<<<<<<< HEAD
                             <i class="bi bi-person user-icon" >{{ Auth::guard('cliente')->user()->name}}</i>
+=======
+                            <i class="bi bi-person user-icon" >{{ Auth::user()->name}}</i>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                                 aria-labelledby="UserDropdown">
                                 <div class="dropdown-header text-center">
 
+<<<<<<< HEAD
 <img class="img-md rounded-circle" src="{{ !empty($profileData->imagem) ? url('upload/cliente-imagem/' . $profileData->imagem) : url('upload/no_image.jpg') }}" alt="Profile image">
 
                                     <p class="font-weight-light text-muted mb-0">{{ Auth::guard('cliente')->user()->email }}</p>
                                 </div>
                                 <a class="dropdown-item" href="{{route('cliente.edit')}}"><i
+=======
+<img class="img-md rounded-circle" src="{{ !empty($profileData->imagem) ? url('upload/admin-imagem/' . $profileData->imagem) : url('upload/no_image.jpg') }}" alt="Profile image">
+
+                                    <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
+                                </div>
+                                <a class="dropdown-item" href=""><i
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                                         class="dropdown-item-icon icon-user text-primary"></i>Meu
                                     Perfil <span class="badge badge-pill badge-danger">1</span></a>
                                 <a class="dropdown-item" href=""><i class="dropdown-item-icon icon-speech text-primary"></i>
@@ -64,7 +97,11 @@ $profileData = App\Models\Cliente::find($id);
                                         class="dropdown-item-icon icon-energy text-primary"></i>
                                     Meus Imóveis</a>
                                 <a type="submit" class="dropdown-item"
+<<<<<<< HEAD
                                     href="{{route('cliente.logout')}}"><i
+=======
+                                    href="{{ route('cliente.logout') }}"><i
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                                         class="dropdown-item-icon icon-power text-primary">
                                     </i>Sair</a>
                             </div>
@@ -176,6 +213,7 @@ $profileData = App\Models\Cliente::find($id);
 
     </div>
 </div>
+<<<<<<< HEAD
 
 
 
@@ -186,3 +224,5 @@ $profileData = App\Models\Cliente::find($id);
 
 
 
+=======
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085

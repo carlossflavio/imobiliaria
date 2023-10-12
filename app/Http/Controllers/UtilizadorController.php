@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -116,6 +117,19 @@ class UtilizadorController extends Controller
     }
 
     public function UserLogout(Request $request)
+=======
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class UtilizadorController extends Controller
+{
+    //
+    public function UtilizadorDashboard() {
+        return view ('utilizador.index');
+    }
+
+    public function UtilizadorLogout(Request $request)
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
     {
         Auth::guard('web')->logout();
 
@@ -124,5 +138,9 @@ class UtilizadorController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+<<<<<<< HEAD
     } // Logout para Admin
+=======
+    }// Logout para Admin
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 }

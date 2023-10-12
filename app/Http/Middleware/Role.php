@@ -18,6 +18,7 @@ class Role
     {
         //Se os dados do login forem diferntes da tabela user no campo role retorna a página incial
         if ($request->user()->role !== $role) {
+<<<<<<< HEAD
 
             $notification = [
                 'message' => 'Você não está autorizado a acessar esta página como Funcionário.',
@@ -28,6 +29,10 @@ class Role
         }
 
 
+=======
+            return redirect('/');
+        }
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
         return $next($request);
     }
 }

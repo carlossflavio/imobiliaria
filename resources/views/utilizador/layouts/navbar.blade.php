@@ -106,7 +106,11 @@
                         <a class="dropdown-item"><i class="dropdown-item-icon icon-question text-primary"></i>
                             FAQ</a>
 
+<<<<<<< HEAD
                             <a type="submit" class="dropdown-item" href="{{route('user.logout')}}">
+=======
+                            <a type="submit" class="dropdown-item" href="{{route('utilizador.logout')}}">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                             <i class="dropdown-item-icon icon-power text-primary"></i>Sair</a>
 
                     </div>

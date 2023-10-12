@@ -26,7 +26,12 @@ class UserFactory extends Factory
             'nif' => fake()->numerify('0023003'), // NIF aleatório de 9 dígitos
             'telefone' =>fake()->phoneNumber,
             'morada' => fake()->address,
+<<<<<<< HEAD
             'role' => fake()->randomElement(['agente', 'secretaria']),
+=======
+            'profissao' => fake()->word,
+            'role' => fake()->randomElement(['admin', 'user', 'cliente']),
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
             'status' => fake()->randomElement(['activo', 'inactivo']),
             'remember_token' => Str::random(10),
         ];

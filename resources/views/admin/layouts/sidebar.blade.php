@@ -37,7 +37,11 @@
 
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
+<<<<<<< HEAD
                     <li class="nav-item"> <a class="nav-link" href="{{route('user.register')}}">Adicionar funcionário</a>
+=======
+                    <li class="nav-item"> <a class="nav-link" href="">Adicionar funcionário</a>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="">Cargos</a>
                     </li>
@@ -52,6 +56,7 @@
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
+<<<<<<< HEAD
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('imoveis.all') }}">Todos imoveis </a>
                     </li>
@@ -62,6 +67,15 @@
                         <a class="nav-link" href="">xxx</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href=""> Adicionar tipo de Imóvel</a></li>
+=======
+                    <li class="nav-item"> <a class="nav-link" href="">Todos imoveis </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="">Adicionar Imóvel</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('todos.tipos') }}">Tipos de imóvel </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('add.tipos') }}"> Adicionar tipo de Imóvel</a></li>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                 </ul>
             </div>
         </li>
@@ -69,7 +83,11 @@
 
 
         <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="{{route('propri.register')}}">
+=======
+            <a class="nav-link" href="pages/icons/simple-line-icons.html">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                 <span class="menu-title">Proprietários</span>
                 <i class="icon-people menu-icon"></i>
             </a>
@@ -106,7 +124,11 @@
             </a>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="">
+=======
+            <a class="nav-link" href="{{route ('add.empresa')}}">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                 <span class="menu-title">Empresa</span>
                 <i class="icon-bubbles menu-icon"></i>
             </a>

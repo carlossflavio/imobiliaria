@@ -67,7 +67,11 @@
                             <div class="auth-form-light text-left p-5">
                                 <h4>Novo aqui?</h4>
                                 <h6 class="font-weight-light">Faça o seu cadastro e conheça os nossos serviços!</h6>
+<<<<<<< HEAD
                                 <form class="pt-3" method="POST" action="{{route('register') }}">
+=======
+                                <form class="pt-3" method="POST" action="{{route('cliente.registro') }}">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
                                     @csrf
 
@@ -75,15 +79,44 @@
                                         <input type="text"
                                         name="name"
                                          class="form-control form-control-lg"
+<<<<<<< HEAD
                                         id="name"                                        placeholder="Nome"
                                         required autofocus autocomplete="name">
                                     </div>
 
+=======
+                                        id="name"
+                                        placeholder="Seu nome"
+                                        required="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text"
+                                        name="nif"
+                                         class="form-control form-control-lg"
+                                        id="nif"
+                                        placeholder="NIF"
+                                        required ="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text"
+                                        name="telefone"
+                                         class="form-control form-control-lg"
+                                        id="telefone"
+                                        placeholder="Telefone"
+                                        required ="">
+                                    </div>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
                                     <div class="form-group">
 
                                         <input type="email" name="email" class="form-control form-control-lg"
+<<<<<<< HEAD
                                             id="email" required autocomplete="Seu Email"
+=======
+                                            id="email" required=""
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                                             placeholder="Email">
 
                                     </div>
@@ -109,8 +142,7 @@
                                     <div class="form-group">
 
                                         <input type="password" name="password" class="form-control form-control-lg"
-                                            id="password" placeholder="Password" required
-                                            autocomplete="new-password">
+                                            id="password" placeholder="Digite a sua Palavra-Passe" required="">
 
                                     </div>
 
@@ -118,7 +150,11 @@
                                     <div class="form-group">
 
                                         <input type="password" name="password_confirmation" class="form-control form-control-lg"
+<<<<<<< HEAD
                                             id="password" required autocomplete="new-password"
+=======
+                                            id="password" required =""
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                                             placeholder="Confirme a sua palavra-passe">
 
                                     </div>

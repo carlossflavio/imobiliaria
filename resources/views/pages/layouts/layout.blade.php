@@ -10,7 +10,25 @@
     <meta content="" name="keywords">
 
 
+<<<<<<< HEAD
    @include('pages.layouts.css')
+=======
+    <!-- Favicons -->
+    <link href="{{ asset('assets/img/logo.jpg') }}" rel="icon">
+    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}"rel="stylesheet">
+    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
 </head>
 
@@ -28,7 +46,12 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
+<<<<<<< HEAD
     @include('pages.layouts.js')
+=======
+    <!-- Vendor JS Files -->
+@include('pages.layouts.js')
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
 </body>
 

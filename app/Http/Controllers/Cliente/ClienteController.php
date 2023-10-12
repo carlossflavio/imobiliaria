@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Cliente;
 
+<<<<<<< HEAD
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -115,6 +116,55 @@ class ClienteController extends Controller
     }
 
     public function ClienteLogout(Request $request)
+=======
+use App\Models\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
+use App\Providers\RouteServiceProvider;
+
+
+class ClienteController extends Controller
+{
+    //
+
+    public function VerPerfil() {
+        return view ('pages.index');
+    }
+
+    public function LoginCliente() {
+        return view ('pages.authentic.login');
+    }
+
+    public function AddCliente(){
+        return view ('pages.authentic.register');
+    }
+
+    public function RegistrarCliente(Request $request) {
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'nif' => $request->nif,
+            'telefone' => $request->telefone,
+            'password' => Hash::make($request->password),
+            'role' => 'cliente',
+            'status' => 'activo',
+        ]);
+
+
+        event(new Registered($user));
+
+        Auth::login($user);
+
+        return redirect(RouteServiceProvider::CLIENTE);
+    }
+
+
+    public function LogoutCliente(Request $request)
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
     {
         Auth::guard('web')->logout();
 
@@ -123,6 +173,7 @@ class ClienteController extends Controller
         $request->session()->regenerateToken();
 
 
+<<<<<<< HEAD
         $notification = array(
             'message' => 'Sessão Terminada com sucesso',
             'alert-type' => 'success'
@@ -130,4 +181,11 @@ class ClienteController extends Controller
 
         return redirect()->route('cliente.form')->with($notification);
     } // Logout para Cliente
+=======
+
+        return redirect('/');
+    } // Logout para Cliente
+
+
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 }

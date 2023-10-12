@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\Admin;
 use App\Models\Horarios;
+=======
+use App\Models\User;
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -11,6 +15,7 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     //
+<<<<<<< HEAD
     public function Index()
     {
         return view('admin.admin-login');
@@ -43,6 +48,16 @@ class AdminController extends Controller
         }
     }
 
+=======
+    public function AdminDashboard() {
+        return view ('admin.admin-index');
+    }
+
+    public function AdminLogin() {
+        return view('admin.admin-login');
+    }
+
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
     public function AdminLogout(Request $request)
     {
         Auth::guard('web')->logout();
@@ -51,6 +66,7 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
+<<<<<<< HEAD
 
         $notification = array(
             'message' => 'Sessão Terminada com sucesso',
@@ -78,24 +94,54 @@ class AdminController extends Controller
         $data = Admin::find($id);
         $data->name = $request->name;
         $data->email = $request->email;
+=======
+        return redirect('/admin/login');
+    }// Logout para Admin
+
+    public function AdminProfile(){
+
+        $id = Auth::user()->id;
+        $profileData = User::find($id);
+
+        return view('admin.admin-profile', compact('profileData'));
+    }// Editar perfil Admin
+
+    public function AdminProfileStore(Request $request){
+
+        $id = Auth::user()->id;
+        $data = User::find($id);
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->morada = $request->morada;
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
         $data->telefone = $request->telefone;
 
         if ($request->file('imagem')) {
             $file = $request->file('imagem');
+<<<<<<< HEAD
             @unlink(public_path('upload/admin-imagem/' . $data->imagem));
             $filename = date('YmdHi') . $file->getClientOriginalName();
+=======
+            @unlink(public_path('upload/admin-imagem/'.$data->imagem));
+            $filename = date('YmdHi').$file->getClientOriginalName();
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
             $file->move(public_path('upload/admin-imagem'), $filename);
             $data['imagem'] = $filename;
         }
 
         $data->save();
 
+<<<<<<< HEAD
         $notification = array(
+=======
+        $notification = array (
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
             'message' => 'Perfil de Administrador actualizado com sucesso',
             'alert-type' => 'success'
         );
 
         return redirect()->back()->with($notification);
+<<<<<<< HEAD
     }
 
     public function AdminAlterar()
@@ -103,10 +149,20 @@ class AdminController extends Controller
 
         $id = Auth::guard('admin')->user()->id;
         $profileData = Admin::find($id);
+=======
+
+    }
+
+    public function AdminAlterar(){
+
+        $id = Auth::user()->id;
+        $profileData = User::find($id);
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
         return view('admin.admin-password', compact('profileData'));
     }
 
+<<<<<<< HEAD
     public function AdminUpdatePassword(Request $request)
     {
 
@@ -114,30 +170,55 @@ class AdminController extends Controller
         $request->validate([
             'old_password' => 'required',
             'new_password' => 'required|confirmed'
+=======
+    public function AdminUpdatePassword (Request $request){
+
+        //Validação
+        $request ->validate([
+            'old_password'=> 'required',
+            'new_password'=> 'required|confirmed'
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
         ]);
 
         //Conrrespondência com a palavra-passe antiga
 
+<<<<<<< HEAD
         if (!Hash::check($request->old_password, Auth::guard('admin')->user()->password)) {
             $notification = [
                 'message' => 'A Palavra-passe antiga não corresponde!',
                 'alert-type' => 'error'
             ];
+=======
+        if (!Hash::check($request->old_password, auth::user()->password)) {
+            $notification = array (
+                'message' => 'A Palavra-passe antiga não corresponde!',
+                'alert-type' => 'error'
+            );
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
             return back()->with($notification);
         }
 
         // Actualização da nova palavra-passe
 
+<<<<<<< HEAD
         Admin::whereId(Auth::guard('admin')->user()->id)->update([
             'password' => Hash::make($request->new_password)
         ]);
 
         $notification = array(
+=======
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+        ]);
+
+        $notification = array (
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
             'message' => 'A Palavra-passe foi actualizada com sucesso!',
             'alert-type' => 'success'
         );
 
         return back()->with($notification);
+<<<<<<< HEAD
     }
 
                                         //CADASTRAR HORÁRIOS
@@ -173,4 +254,8 @@ class AdminController extends Controller
         return view ('admin.horarios.all-horarios', compact('horario'));
     }
 
+=======
+
+    }
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 }

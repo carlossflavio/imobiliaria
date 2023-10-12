@@ -79,7 +79,14 @@
                         <label class="tx-11 fw-bolder mb-0 text-uppercase">Email:</label>
                         <p class="text-muted">{{ $profileData->email }}</p>
                     </div>
+<<<<<<< HEAD
 
+=======
+                    <div class="mt-3">
+                        <label class="tx-11 fw-bolder mb-0 text-uppercase">Morada:</label>
+                        <p class="text-muted">{{ $profileData->morada }}</p>
+                    </div>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                 </div>
             </div>
         </div>
@@ -106,6 +113,15 @@
   </div>
 
   <div class="mb-3">
+<<<<<<< HEAD
+=======
+      <label for="exampleInputPassword1" class="form-label">Morada</label>
+      <input type="text" name="morada" class="form-control" id="exampleInputPassword1" autocomplete="off"
+      name="morada"    placeholder="Digite sua morada">
+  </div>
+
+  <div class="mb-3">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
     <label for="exampleInputEmail1" class="form-label">Telefone</label>
     <input type="text"  class="form-control" id="exampleInputEmail1"
     name="telefone" placeholder="Seu número">
@@ -145,6 +161,10 @@ $(document).ready(function () {
     });
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 </script>
 
 

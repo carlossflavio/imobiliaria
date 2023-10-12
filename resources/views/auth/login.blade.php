@@ -3,7 +3,11 @@
 @section ('content')
 
 
+<<<<<<< HEAD
 @include('admin.layouts.css')
+=======
+@include('pages.authentic.asset.css-auth')
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
 @guest
 <div class="intro intro-carousel swiper position-relative">
@@ -17,14 +21,14 @@
                             <h4>Preparado para adquirir o seu imóvel?</h4>
                             <h6 class="font-weight-light">Inicie a sessão para continuar!</h6>
 
-                            <form class="pt-3" method="POST" action="{{ route('login') }}">
+                            <form class="pt-3" method="POST" action="{{ route('cliente.login') }}">
                                 @csrf
 
                                 <div class="form-group">
                                     <input type="email"
                                     name="email"
-                                    class="form-control form-control-lg" id="exampleInputEmail1" :value="old('email')"
-                                    required autofocus autocomplete="username"
+                                    class="form-control form-control-lg" id="exampleInputEmail1"
+                                    required =""
                                     placeholder="E-mail">
                                 </div>
                                 <div class="form-group">
@@ -32,8 +36,7 @@
                                     name="password"
                                     class="form-control form-control-lg"
                                     id="exampleInputPassword1"
-                                    :value="('Password')"
-                                    required autocomplete="current-password"
+                                    required =""
                                     placeholder="Palavra-passe">
                                 </div>
                                 <div class="mt-3">
@@ -46,10 +49,10 @@
                                             <input type="checkbox" name="remember" class="form-check-input"> Lembrar-me
                                         </label>
                                     </div>
-                                    <a href="{{route ('password.request')}}" class="auth-link text-black">Esqueceu a palavra-passe?</a>
+                                    <a href="" class="auth-link text-black">Esqueceu a palavra-passe?</a>
                                 </div>
                                 <div style="color: black" class="text-center mt-4 font-weight-light"> Não possui uma conta? <a
-                                        href="{{ route('register') }}" class="text-primary">Cadastrar-se</a>
+                                        href="{{ route('cliente.registro') }}" class="text-primary">Cadastrar-se</a>
                                 </div>
                             </form>
                         </div>

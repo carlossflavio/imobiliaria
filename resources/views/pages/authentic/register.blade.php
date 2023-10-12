@@ -19,7 +19,11 @@
                             <div class="auth-form-light text-left p-5">
                                 <h4>Novo aqui?</h4>
                                 <h6 class="font-weight-light">Faça o seu cadastro e conheça os nossos serviços!</h6>
+<<<<<<< HEAD
                                 <form class="pt-3" method="POST" action="{{route('cliente.create')}}">
+=======
+                                <form class="pt-3" method="POST" action="{{route('cliente.registro') }}">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
                                     @csrf
 
@@ -27,16 +31,28 @@
                                         <input type="text"
                                         name="name"
                                          class="form-control form-control-lg"
+<<<<<<< HEAD
                                         id="name" placeholder="Nome Completo"
                                         value="{{old('name')}}"
                                       >
                                     </div>
 
+=======
+                                        id="name"                                        placeholder="Nome"
+                                        required autofocus autocomplete="name">
+                                    </div>
+
+
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                                     <div class="form-group">
 
                                         <input type="email" name="email" class="form-control form-control-lg"
                                             id="email" required autocomplete="Seu Email"
+<<<<<<< HEAD
                                             placeholder="Email" value="{{old('email')}}">
+=======
+                                            placeholder="Email">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
                                     </div>
 
@@ -45,6 +61,24 @@
   {{ $message }}
 </div>
 @enderror
+
+
+                                    <div class="form-group">
+                                        <input type="text"
+                                        name="nif"
+                                         class="form-control form-control-lg"
+                                        id="nif"
+                                        placeholder="NIF"
+                                        required autofocus autocomplete="nif">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text"
+                                        name="telefone"
+                                         class="form-control form-control-lg"
+                                        id="telefone"
+                                        placeholder="Telefone">
+                                    </div>
 
 
                                     <div class="form-group">
@@ -77,7 +111,11 @@
                                             type="submit" name="register">Cadastrar</button>
                                     </div>
                                     <div class="text-center mt-4 font-weight-light"> Já possui uma conta?<a
+<<<<<<< HEAD
                                             href="{{ route('cliente.form') }}" class="text-warning">Login</a>
+=======
+                                            href="{{ route('cliente.login') }}" class="text-warning">Login</a>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
 
                                     </div>

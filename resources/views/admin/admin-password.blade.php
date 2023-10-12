@@ -20,14 +20,27 @@
                         <p class="text-muted">{{ $profileData->sobrenome }}</p>
                     </div>
                     <div class="mt-3">
+<<<<<<< HEAD
+=======
+                        <label class="tx-11 fw-bolder mb-0 text-uppercase">Telefone:</label>
+                        <p class="text-muted">{{ $profileData->telefone }}</p>
+                    </div>
+                    <div class="mt-3">
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                         <label class="tx-11 fw-bolder mb-0 text-uppercase">Email:</label>
                         <p class="text-muted">{{ $profileData->email }}</p>
                     </div>
                     <div class="mt-3">
+<<<<<<< HEAD
                         <label class="tx-11 fw-bolder mb-0 text-uppercase">Telefone:</label>
                         <p class="text-muted">{{ $profileData->telefone }}</p>
                     </div>
 
+=======
+                        <label class="tx-11 fw-bolder mb-0 text-uppercase">Morada:</label>
+                        <p class="text-muted">{{ $profileData->morada }}</p>
+                    </div>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                 </div>
             </div>
         </div>

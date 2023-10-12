@@ -52,7 +52,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="{{ asset('assets1/js/code/code.js') }}"></script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
     <!-- Plugin js for this page -->
     <script src=" {{ asset('assets1/vendors/datatables.net/jquery.dataTables.js') }}"></script>
     <script src=" {{ asset('assets1/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>

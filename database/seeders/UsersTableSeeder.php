@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
     {
 
         DB::table('users')->insert([
+<<<<<<< HEAD
             //Dados para a tabela agente
             [
                 'name' => 'Mateus',
@@ -34,6 +35,33 @@ class UsersTableSeeder extends Seeder
                 'email' => 'saletehpedro@gmail.com',
                 'password' => Hash::make('123456789'),
                 'role' => 'secretaria',
+=======
+            //Dados para a tabela admin
+            [
+                'name' => 'Admin',
+                'sobrenome' => 'Pedro',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make('123456789'),
+                'role' => 'admin',
+                'status' => 'activo',
+            ],
+            //Dados para a tabela usuer/funcionário
+            [
+                'name' => 'Carlos',
+                'sobrenome' => 'Tomboca',
+                'email' => 'carlos@gmail.com',
+                'password' => Hash::make('123456789'),
+                'role' => 'user',
+                'status' => 'activo',
+            ],
+            //Dados para a tabela cliente
+            [
+                'name' => 'Mateus',
+                'sobrenome' => 'Gaspar',
+                'email' => 'mateusgasoar@gmail.com',
+                'password' => Hash::make('123456789'),
+                'role' => 'cliente',
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                 'status' => 'activo',
             ],
 

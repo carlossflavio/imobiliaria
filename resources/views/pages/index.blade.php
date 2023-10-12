@@ -5,6 +5,7 @@
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel swiper position-relative">
     <div class="swiper-wrapper">
+<<<<<<< HEAD
         
 @auth
         @if (!Auth::guard('cliente')->user()->perfil_completo)
@@ -14,6 +15,8 @@
         @endif
 @endauth
 
+=======
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
       <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(assets/img/imovel-1 (1).jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">

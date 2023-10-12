@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\Imovel;
+=======
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -12,6 +15,7 @@ class PagesController extends Controller
 
         return view('pages.index');
     }
+<<<<<<< HEAD
     public function MostrarImovel(){
 
         $imoveis = Imovel::all();
@@ -19,5 +23,7 @@ class PagesController extends Controller
         return view('pages.imoveis', compact('imoveis'));
 
     }
+=======
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 
 }

@@ -53,7 +53,11 @@
                         </a>
                         <a class="dropdown-item preview-item">
                             <div class="preview-thumbnail">
+<<<<<<< HEAD
                               <img src="{{ asset( 'assetes/images/faces/face1.jpg') }}" alt="image"
+=======
+                                <img src="{{ asset( 'assetes/images/faces/face1.jpg') }}" alt="image"
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                                     class="img-sm profile-pic">
                             </div>
                             <div class="preview-item-content flex-grow py-2">
@@ -65,13 +69,19 @@
                 </li>
 
 @php
+<<<<<<< HEAD
     $id = Auth::guard('admin')->user()->id;
     $profileData = App\Models\Admin::find($id);
+=======
+        $id = Auth::user()->id;
+        $profileData = App\Models\User::find($id);
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 @endphp
 
                 <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
                     <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown"
                         aria-expanded="false">
+<<<<<<< HEAD
 
 <img class="img-xs rounded-circle ml-2" src="{{ !empty($profileData->imagem) ? url('upload/admin-imagem/' . $profileData->imagem) : url('upload/no_image.jpg') }}"
                             alt="Profile image"> <span class="font-weight-normal"> {{ Auth::guard('admin')->user()->name }}
@@ -86,6 +96,18 @@
 
                             <p class="mb-1 mt-3">{{ Auth::guard('admin')->user()->name }}</p>
                             <p class="font-weight-light text-muted mb-0">{{ Auth::guard('admin')->user()->email }}</p>
+=======
+                        <img class="img-xs rounded-circle ml-2" src="{{ !empty($profileData->imagem) ? url('upload/admin-imagem/' . $profileData->imagem) : url('upload/no_image.jpg') }}"
+                            alt="Profile image"> <span class="font-weight-normal"> {{ Auth::user()->name }}
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                        <div class="dropdown-header text-center">
+                            <img class="img-md rounded-circle" src="{{ !empty($profileData->imagem) ? url('upload/admin-imagem/' . $profileData->imagem) : url('upload/no_image.jpg') }}"
+                                alt="Profile image">
+                            <p class="mb-1 mt-3">{{ Auth::user()->name }}</p>
+                            <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
                         </div>
 
                         <a href="{{ route('admin.perfil') }}" class="dropdown-item"><i

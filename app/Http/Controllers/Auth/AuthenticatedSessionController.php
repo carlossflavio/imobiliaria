@@ -30,10 +30,19 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
         $url ='';
         //definição de qual rota será redirecionado quem fizer o login
+<<<<<<< HEAD
         if ($request->user()->role==='agente') {
         $url='agente/dashboard';
         } elseif ($request->user()->role==='secretaria') {
             $url='secretaria/dashboard';
+=======
+        if ($request->user()->role==='admin') {
+        $url='admin';
+        } elseif ($request->user()->role==='user') {
+            $url='utilizador/dashboard';
+        }elseif ($request->user()->role==='cliente') {
+            $url='/';
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
         }
 
 

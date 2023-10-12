@@ -24,7 +24,12 @@ return new class extends Migration
             $table->string('nif')-> nullable();
             $table->string('telefone')-> nullable();
             $table->string('morada')-> nullable();
+<<<<<<< HEAD
             $table->enum('role', ['secretaria','agente'])->default('agente');
+=======
+            $table->string('profissao')-> nullable();
+            $table->enum('role', ['admin','user','cliente'])->default('cliente');
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
             $table->enum('status', ['activo','inactivo'])->default('activo');
             $table->rememberToken();
             $table->timestamps();

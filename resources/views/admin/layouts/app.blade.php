@@ -8,7 +8,11 @@
  <title>@yield('title')</title>
 
     @include('admin.layouts.css')
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> cd2574d201b80304164013b9207f9e10eaffc085
 </head>
 
 <body>
